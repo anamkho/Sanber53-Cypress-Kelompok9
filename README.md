@@ -1,8 +1,7 @@
 # Sanber53-Cypress-Kelompok9
 Quiz 3
 
-Anggota Kelompok
-1. Restu Suryo Pratomo
+Nama Anggota Kelompok
 2. Fadel Muhammad
 3. Muhamad Lutfi Arrasyid
 4. Khoirul Anam
