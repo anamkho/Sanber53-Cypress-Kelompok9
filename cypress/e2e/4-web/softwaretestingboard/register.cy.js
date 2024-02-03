@@ -1,13 +1,15 @@
+import registerPage from "../../../support/pageObject/registerPage"
+
 describe('Register Functionality', () => {
   beforeEach(() => {
     cy.visit('https://magento.softwaretestingboard.com/customer/account/create/')
   })
     it('Verify Success Regist', () => {
-      cy.get('#firstname').type('Sanbercode53')
-      cy.get('#lastname').type('Kelompok9')
-      cy.get('#email_address').type('sanbercode533@gmail.com')
-      cy.get('#password').type('Sanbercodeteam9')
-      cy.get('#password-confirmation').type('Sanbercodeteam9')
+      cy.get(registerPage.name1).type('Sanbercode53')
+      cy.get(registerPage.name2).type('Kelompok9')
+      cy.get(registerPage.email).type('sanbercode533@gmail.com')
+      cy.get(registerPage.pwd).type('Sanbercodeteam9')
+      cy.get(registerPage.pwd_confirm).type('Sanbercodeteam9')
       cy.get('#form-validate > .actions-toolbar > div.primary > .action').click()
       cy.get('.message-success > div').should('contain.text','Thank you for registering with Main Website Store.')
     })
