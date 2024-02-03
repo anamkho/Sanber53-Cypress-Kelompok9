@@ -8,10 +8,10 @@ Nama Anggota Kelompok:
 5. Cut Naila Fadia Fiadharma
 
 Pembagian Tugas :
-Create an Account - Khoirul Anam
-Login - Fadel Muhammad
-My Account > Edit Account Information - Cut Naila Fadia Fiadharma
-My Account > Edit Address - Cut Naila Fadia Fiadharma
-Choose product(s) - Muhamad Lutfi Arrasyid
-View and Update Shopping Cart - Muhamad Lutfi Arrasyid
-Proceed to Checkout - Fadel Muhammad
+1. Create an Account - Khoirul Anam
+2. Login - Fadel Muhammad
+3. My Account > Edit Account Information - Cut Naila Fadia Fiadharma
+4. My Account > Edit Address - Cut Naila Fadia Fiadharma
+5. Choose product(s) - Muhamad Lutfi Arrasyid
+6. View and Update Shopping Cart - Muhamad Lutfi Arrasyid
+7. Proceed to Checkout - Fadel Muhammad
