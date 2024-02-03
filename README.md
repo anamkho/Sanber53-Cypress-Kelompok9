@@ -2,10 +2,10 @@
 Quiz 3
 
 Nama Anggota Kelompok:
-2. Fadel Muhammad
-3. Muhamad Lutfi Arrasyid
-4. Khoirul Anam
-5. Cut Naila Fadia Fiadharma
+1. Fadel Muhammad
+2. Muhamad Lutfi Arrasyid
+3. Khoirul Anam
+4. Cut Naila Fadia Fiadharma
 
 Pembagian Tugas :
 1. Create an Account - Khoirul Anam
