@@ -1,5 +1,6 @@
 import editAcc from "../../../support/pageObject/editAcc"
 const editAccData = require('../../../fixtures/editAccData.json')
+const hft = "N"
 
 describe('template spec', () => {
   beforeEach(() => {
