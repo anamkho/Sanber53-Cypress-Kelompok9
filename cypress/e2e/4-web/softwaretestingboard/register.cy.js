@@ -4,7 +4,8 @@ describe('Register Functionality', () => {
   beforeEach(() => {
     cy.visit('')
   })
-    it('Verify Success Regist', () => {
+    it('Verify Success Register - User create new user with valid name, email, and password', () => {
+      cy.contains('Create an Account').click()
       cy.get(registerPage.name1).type('Sanbercode53')
       cy.get(registerPage.name2).type('Kelompok9')
       cy.get(registerPage.email).type('sanbercode53123@gmail.com')
@@ -13,7 +14,8 @@ describe('Register Functionality', () => {
       registerPage.clickRegister()
       cy.get('.message-success > div').should('contain.text','Thank you for registering with Main Website Store.')
     })
-    it('Verify Failed Regist - Email not valid', () => {
+    it('Verify Failed Regist - User create new user with valid name, invalid email, and valid password', () => {
+      cy.contains('Create an Account').click()
       cy.get(registerPage.name1).type('Sanbercode53')
       cy.get(registerPage.name2).type('Kelompok9')
       cy.get(registerPage.email).type('sanbercodeteam9')
@@ -23,6 +25,7 @@ describe('Register Functionality', () => {
       cy.get('#email_address-error').should('contain.text','Please enter a valid email address (Ex: johndoe@domain.com).')
     })
     it('Verify Failed Regist - Email already registered', () => {
+      cy.contains('Create an Account').click()
       cy.get(registerPage.name1).type('Sanbercode53')
       cy.get(registerPage.name2).type('Kelompok9')
       cy.get(registerPage.email).type('sanbercodeteam9@gmail.com')
@@ -32,6 +35,7 @@ describe('Register Functionality', () => {
       cy.get('.message-error > div').should('contain.text','There is already an account with this email address. If you are sure that it is your email address,')
     })
     it('Verify Failed Regist - Password not unique', () => {
+      cy.contains('Create an Account').click()
       cy.get(registerPage.name1).type('Sanbercode53')
       cy.get(registerPage.name2).type('Kelompok9')
       cy.get(registerPage.email).type('sanbercode53team9@gmail.com')
@@ -40,8 +44,9 @@ describe('Register Functionality', () => {
       registerPage.clickRegister()
       registerPage.verifyError()
     })
-    it.only('Verify Failed Regist - Password weak & less than 8 character', () => {
-      cy.get('#firstname').type('Sanbercode53')
+    it('Verify Failed Regist - Password weak & less than 8 character', () => {
+      cy.contains('Create an Account').click()
+      cy.get(registerPage.name1).type('Sanbercode53')
       cy.get(registerPage.name2).type('Kelompok9')
       cy.get(registerPage.email).type('sanbercode53team9@gmail.com')
       cy.get(registerPage.pwd).type('san')
@@ -50,7 +55,8 @@ describe('Register Functionality', () => {
       registerPage.verifyError()
     })
     it('Verify Failed Regist - Password confirmation not match', () => {
-      cy.get('#firstname').type('Sanbercode53')
+      cy.contains('Create an Account').click()
+      cy.get(registerPage.name1).type('Sanbercode53')
       cy.get(registerPage.name2).type('Kelompok9')
       cy.get(registerPage.email).type('sanbercode53team9@gmail.com')
       cy.get(registerPage.pwd).type('Sanbercode9')
