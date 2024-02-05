@@ -7,5 +7,7 @@
     "jalan2": "lan berdua",
     "jalan3": "lan bertiga",
     "kota": "kampung orang",
-    "pos": "234"
+    "pos": "23456",
+
+    "nohpincorrect": "ini nomor telpon"
 }
