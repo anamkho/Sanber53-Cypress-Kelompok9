@@ -13,7 +13,9 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: "https://magento.softwaretestingboard.com/",
     env: {
-      email: "sanbercode53@gmail.com"
+      email: "sanbercode53@gmail.com",
+      pwd: "Sanbercodeteam9"
+
     },
     setupNodeEvents(on, config) {
       // implement node event listeners here

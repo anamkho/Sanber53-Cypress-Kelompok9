@@ -11,6 +11,12 @@ describe('Sign in Functionality', () => {
         cy.get(signinPage.pwd).type(signInData["valid-data"]["valid-pwd"])
         signinPage.clickSignIn()
     })
+    it.only('Verify Success Login', () => {
+      cy.contains('Sign In').click()
+      cy.get(signinPage.email).type(Cypress.env('email'))
+      cy.get(signinPage.pwd).type(Cypress.env('pwd'))
+      cy.url().should('contain','https://magento.softwaretestingboard.com/')
+    })
     it('Verify Failed Login - User login with invalid email and password', () => {
       cy.contains('Sign In').click()
       cy.get(signinPage.email).type(signInData["invalid-email"])
@@ -25,7 +31,7 @@ describe('Sign in Functionality', () => {
       signinPage.clickSignIn()
       signinPage.verifyError()
     })
-    it.only('Verify Failed Login - User login with valid email and invalid password', () => {
+    it('Verify Failed Login - User login with valid email and invalid password', () => {
       cy.contains('Sign In').click()
       cy.get(signinPage.email).type(Cypress.env('email'))
       cy.get(signinPage.pwd).type('Sanbercodeteam')
@@ -40,7 +46,7 @@ describe('Sign in Functionality', () => {
       cy.get('.messages > :nth-child(1) > div').should('be.visible')
       cy.get('.messages > :nth-child(2) > div').should('be.visible')
     })
-    it.only('Verify Failed Login - User login with email has fill and password has empty', () => {
+    it('Verify Failed Login - User login with email has fill and password has empty', () => {
       cy.contains('Sign In').click()
       cy.get(signinPage.email).type(Cypress.env('email'))
       cy.get(signinPage.pwd)
