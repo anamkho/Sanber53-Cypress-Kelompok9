@@ -1,9 +1,9 @@
-class signInPage{
+class editAddress{
     email = '#email'
-    pwd = '#pass'
+    pw = '#pass'
     signIn_btn = '.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2 > span'
-    err = '.message-error > div'
-    
+    editAddress_btn = '.box-billing-address > .box-actions > .action > span'
+    error = '.message-error > div'
     verifyError(){
         cy.get(this.err).should('be.visible')
     }
@@ -12,4 +12,4 @@ class signInPage{
         cy.get(this.signIn_btn).click()
     }
 }
-export default new signInPage()
+export default new editAddress()

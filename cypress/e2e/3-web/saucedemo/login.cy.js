@@ -1,8 +1,8 @@
 describe('Login Functionality', () => {
   it('Verify Failed Login', () => {
     cy.visit('https://www.saucedemo.com/')
-    cy.get('#user-name').type('anamkho')
-    cy.get('[name="password"]').type('123456')
+    cy.get('#user-name').type('standard_user')
+    cy.get('[name="password"]').type('standard_user')
     cy.get('.submit-button.btn_action').click()
     cy.get('[data-test="error"]').should('be.visible')
   })
