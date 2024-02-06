@@ -63,6 +63,7 @@ describe('Choose Product Functionality', () => {
       cy.get(':nth-child(7) > .secondary > .action > span').click({force: true})
       cy.url().should('contain','https://magento.softwaretestingboard.com/checkout/cart/')
       cy.get(cartPage.deleteBtn).click({force: true})
+    
     })
 
 })

@@ -23,4 +23,3 @@ class cartPage{
     
 }
 export default new cartPage()
-
