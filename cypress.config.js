@@ -1,14 +1,15 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  defaultCommandTimeout: 2024,
+  defaultCommandTimeout: 1234567,
   viewportHeight: 636,
   viewportWidth: 989,
   execTimeout: 12345,
   taskTimeout: 12345,
-  pageLoadTimeout: 12345,
+  pageLoadTimeout: 112345,
   requestTimeout: 1111,
   responseTimeout: 54321,
+  chromeWebSecurity: false,
 
   e2e: {
     baseUrl: "https://magento.softwaretestingboard.com/",
